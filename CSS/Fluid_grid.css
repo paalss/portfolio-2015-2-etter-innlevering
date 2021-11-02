@@ -1,0 +1,643 @@
+@charset "UTF-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		4;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	15;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+
+.fluidList {
+    list-style:none;
+    list-style-image:none;
+    margin:0;
+    padding:0;        
+}
+
+/*
+===================================================================================
+Mobile Layout: 480px and below. 
+===================================================================================
+*/
+/*må piffe opp mobile layout overskriften her sånn at den blir mer synlig*/
+
+body {
+	font-family: 'Muli', sans-serif;
+	/*text-transform: lowercase;*/
+	font-size: 16px;
+	font-weight: 400;
+	/*min-height:100%;*/
+	position:relative;
+
+
+}
+	body :first-letter, body .uppercase {	/*første bokstav i p h eller a er stor bokstav*/
+		text-transform:uppercase;
+	}
+	body p, h1, h2, h3, nav, img, iframe {
+		margin-left:5%;
+		margin-right:5%;
+	}
+	body nav {	/*nav eller a? funker i hvertfall med nav*/
+		/*text-transform:uppercase;*/
+	}
+	body h1 {
+		font-family: 'Lato', sans-serif;
+		font-size:30px;
+		font-weight:700;
+		padding-top:20px;
+		padding-bottom:10px;
+	}
+	body h1::first-letter {
+		color:#EA5A0B;
+	}
+	body h2 {
+		font-family: 'Lato', sans-serif;
+		font-size:20px;
+		font-weight:700;
+		color:#EA5A0B;
+		border-bottom:1px solid #EA5A0B;
+	}
+	body h3 {
+		font-family:'Lato', sans-serif;
+		font-size:10px;
+		font-weight:700;
+		color:#FF7A00;
+	}
+	body span.black {
+		color:#0A0A0A;
+	}
+	body span.orange {
+		color:#EA5A0B;
+	}
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	/*margin-bottom:60px;*/		/*dytte bort footer slik at footer ikke overlapper informasjon fra container*/
+	width: 88.0326%;
+	padding-left: 1.4836%;
+	padding-right: 1.4836%;
+	clear:none;
+	float:none;
+	/*-webkit-box-shadow: 1px 0px 11px 14px #F7F7F7;*/
+	/*-moz-box-shadow: 1px 1px 11px 14px #F7F7F7;*/
+	/*box-shadow: 1px 0px 11px 14px #F7F7F7;*/
+	position:static;
+}
+
+.hovedheader {												/*–––––––––––––––MOBILE HEADER*/
+	/*margin-top:15px;*/
+	padding-top:15px;
+	/*background:#EA5A0B;*/
+	
+	
+	
+background: #ea5a0b; /* Old browsers */
+
+background: -moz-linear-gradient(top,  #ea5a0b 0%, #ea5a0b 66%, #c64e06 98%, #c64e06 100%); /* FF3.6+ */
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ea5a0b), color-stop(66%,#ea5a0b), color-stop(98%,#c64e06), color-stop(100%,#c64e06)); /* Chrome,Safari4+ */
+
+background: -webkit-linear-gradient(top,  #ea5a0b 0%,#ea5a0b 66%,#c64e06 98%,#c64e06 100%); /* Chrome10+,Safari5.1+ */
+
+background: -o-linear-gradient(top,  #ea5a0b 0%,#ea5a0b 66%,#c64e06 98%,#c64e06 100%); /* Opera 11.10+ */
+
+background: -ms-linear-gradient(top,  #ea5a0b 0%,#ea5a0b 66%,#c64e06 98%,#c64e06 100%); /* IE10+ */
+
+background: linear-gradient(to bottom,  #ea5a0b 0%,#ea5a0b 66%,#c64e06 98%,#c64e06 100%); /* W3C */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ea5a0b', endColorstr='#c64e06',GradientType=0 ); /* IE6-9 */
+
+
+
+
+
+
+	position:absolute;
+	left:0;
+	top:0;
+	margin-bottom:50px;
+}
+	.hovedheader img {
+	}
+		.pal img {											/*––––––––––PÅL*/
+			width:50%;
+			max-width:160px;	/*PNG-fil width 160px*/
+			margin-left:auto;
+			margin-right:auto;
+			margin-bottom:15px;
+			display:block;
+			/*border: 4px dotted #FFAE00;*/
+		}
+		
+.hovedmeny {												/*–––––––––––––––✰MOBILE HOVEDMENY*/
+	/*margin-top:20px;*/
+	padding-top:10px;
+	/*padding-bottom:10px;*/
+	/*border-top: 1px dashed #000;
+	border-bottom: 1px dashed #000;*/
+	/*background:#FF8600;*/
+	/*border: 2px solid #FF7A00;*/	/*mindre moderne med runde hjørner*/
+	/*border-radius: 20px;*/
+	text-align:left;
+}
+	.hovedmeny a/*, .hovedmeny a:visited*/ {
+		font-size:20px;
+		text-decoration:none;
+		width:90%;
+		height:40px;
+		display:block;
+		color:#FFF;
+		padding-left:10%;
+		/*padding-right: 5%;*/
+		line-height: 2;
+		/*border-bottom: 1px dashed #FFF;*/
+		/*blury omriss (box-shadow)*/
+		/*-webkit-box-shadow: 0px 0px 2px rgba(255,0,4,1.00);
+		box-shadow: 0px 0px 2px rgba(255,0,4,1.00);*/
+	}
+	.hovedmeny a.aktiv {
+		/*color:#000;*/
+		color:#EA5A0B;
+		background:#FFF;
+		/*text-decoration:underline;*/
+	}
+	/*.hovedmeny a.aktiv:before, .hovedmeny a:hover:before, .hovedmeny a:focus:before {
+		content:'\00B7'; padding-right:5px;*/		/*dott foran lenke, viser at siden er aktiv, DEN ØDELEGGER FOR BODY :FIRST-LETTER {UPPERCASE} fordi den teller som første bokstav*/
+	/*}*/
+	.hovedmeny a:hover, .hovedmeny a:focus {
+		/*background:#FFAE00;*/
+		/*border: 1px solid #FFAE00;*/
+		/*border-radius: 20px;*/
+	}	
+	.hovedmeny::first-letter {
+	}
+	.hovedmeny a.index {
+		border-bottom: 1px dashed #FFF;
+	}
+	.hovedmeny a.om {
+		border-bottom: 1px dashed #FFF;
+		border-top: 1px dashed #FFF;
+	}
+	.hovedmeny a.arbeid {
+		border-top:1px dashed #FFF;
+	}
+.innhold {													/*–––––––––––––––MOBILE INNHOLD*/
+	margin-top:300px;
+	display: block;
+	clear: both;
+	margin-bottom:100px;
+
+
+	/*border-left: 1px solid #E8E8E8;
+	border-right: 1px solid #E8E8E8;*/
+	/*-webkit-box-shadow: 1px 1px 11px 14px #E8E8E8, 1px 1px 11px 14px #E8E8E8;
+	-moz-box-shadow: 1px 1px 11px 14px #E8E8E8, 1px 1px 11px 14px #E8E8E8;
+	box-shadow: 1px 0px 11px 14px #E8E8E8, 1px 0px 11px 14px #E8E8E8;*/
+	
+}
+	.innhold before {
+		/*box-shadow: 0 1px;*/
+	}
+	/*.innhold shadclip {
+		overflow:hidden;
+		padding: 0 6px;
+	}
+	.innhold shadclip shadow {
+		-webkit-box-shadow: 1px 1px 11px 14px #E8E8E8;
+	-moz-box-shadow: 1px 1px 11px 14px #E8E8E8;
+	box-shadow: 1px 0px 11px 14px #E8E8E8;
+	}*/
+	.innhold p {
+	}
+	/*.bildemeny h2 {
+		display:inline;
+		text-align:center;
+		clear:both;
+	}*/
+	.bildemeny img {										/*✰OM og ARBEID i index og BILDER AV ARBEID i arbeid*/
+		width:100%;
+		max-width:540px;
+		margin-left:auto;
+		margin-right:auto;
+		display:block;
+		/*border: 4px solid #FF7A00;*/
+		/*width:350px;*/
+		/*width:90%;*/
+	}
+	.innhold img {
+		/*border: 4px solid rgba(255,255,255,0.00);*/	/*for transparent-filer som ikke skal ha en hvit marg rundt bildet*/
+		/*border-radius:10px;*/
+		max-height:548px;
+		/*max-width:273px;*/
+	}
+		.litt_arbeid {
+		}
+			.litt_arbeid img {
+				width:30%;
+			}
+	.kolonner {								/*////////////////////////////////////*/
+		float:left;								/*MOBILE KOLONNER*/
+	}											/*///////////////////////////////////*/
+		.kolonneboks {
+			border-bottom: 1px dashed #CDCDCD;
+			padding-top:10px;
+			padding-left:5%;
+			/*float:left;
+			clear:none;*/
+		}
+		.kolonner h2 {
+			font-size:12px;
+			padding-bottom:0;
+		}
+		.kolonner p {
+			font-size:10px;
+			/*padding-bottom:10px;*/
+			word-wrap:break-word;							/*break-word og auto/hidden skal forhindre teksten i å flow-e ut av div-en*/
+			overflow:auto;	/*overflow:hidden;*/
+			clear:left;
+		}
+		.kolonne1 {
+			/*border: 2px dotted #FFAE00;*/
+			/*border-right: 1px solid #CDCDCD;*/	/*denne gjør at kolonne2 ikke blir plass på samme linje*/
+			width:60%;
+			/*max-width:270px;*/
+			/*clear:none;*/				/*clear:none er på begge kolonner men må ikke settes i felles div-en for kolonnene: .kolonner*/
+			clear:left;
+			/*float:left;**************************/
+			/*padding:0;*/
+			/*margin:0;*/
+			/*position:inherit;*/
+		}
+			.kolonne1 img {
+				width:60%;
+				max-width:700px;
+			}
+				.ulv {
+					max-width:295px;
+					/*padding-left:5%;*/
+				}
+				.portefølje img {
+				}
+				.mausund {
+					padding-left:5%;
+				}
+		.kolonne2 {
+			/*border: 2px dotted #FFAE00;*/
+			width:40%;
+			/*clear:none;*/
+			/*max-width:270px;*/
+			/*float:left;:::::::::::::::::::*/
+			/*margin:0;*/
+		}
+			.kolonne2 img {
+				width:40%;
+				max-width:358px;
+			}
+				/*.atteglass {
+					max-width:297px;*/	/*åtte glass fil er 297px bred*/		/*ang. forrige kommentear: ikke nå lenger!*/
+				/*}*/
+				/*.serjtankian {
+					background:#FAFAFA;
+				}*/
+				.drikkeflaske {
+					width:50%;
+				}
+		.kolonne3 {
+			width:40%;
+			/*clear:none;*/
+		}
+			/*.kolonne3 img {
+				width:95%;
+			}*/
+		.kolonne4 {
+			width:20%;
+			/*display:table-cell;
+			vertical-align:middle;*/
+			/*her prøver jeg å få en horizontal distribute center plassering på div-ene, men det e´kke lett*/
+		}
+			.kolonne4 img {
+				width:90%;
+			}
+			
+			.kolonneboks {
+				
+			}
+				
+	.omside img {
+		width:100%;
+		max-width:500px;
+	}
+	.omside p {
+		max-width:600px;
+	}
+.bildemeny_deskop img {
+	display:none;
+}
+.hovedfooter {												/*✰–––––––––––––––MOBILE FOOTER*/
+	/*background:#FF7A00;*/
+	
+	
+background: #c64e06; /* Old browsers */
+
+background: -moz-linear-gradient(top,  #c64e06 0%, #c64e06 70%, #ea5a0b 91%, #ea5a0b 100%); /* FF3.6+ */
+
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#c64e06), color-stop(70%,#c64e06), color-stop(91%,#ea5a0b), color-stop(100%,#ea5a0b)); /* Chrome,Safari4+ */
+
+background: -webkit-linear-gradient(top,  #c64e06 0%,#c64e06 70%,#ea5a0b 91%,#ea5a0b 100%); /* Chrome10+,Safari5.1+ */
+
+background: -o-linear-gradient(top,  #c64e06 0%,#c64e06 70%,#ea5a0b 91%,#ea5a0b 100%); /* Opera 11.10+ */
+
+background: -ms-linear-gradient(top,  #c64e06 0%,#c64e06 70%,#ea5a0b 91%,#ea5a0b 100%); /* IE10+ */
+
+background: linear-gradient(to bottom,  #c64e06 0%,#c64e06 70%,#ea5a0b 91%,#ea5a0b 100%); /* W3C */
+
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c64e06', endColorstr='#ea5a0b',GradientType=0 ); /* IE6-9 */
+
+
+
+
+
+	
+	
+	/*border:2px solid #FF7A00;*/
+	/*border-radius:20px;*/
+	width:100%;
+	position:absolute;
+	bottom:0;
+	left:0;
+	/*margin-top:1000px;*/	/*det er forskjellig fra side til side hvor høy containeren er*/
+}
+	.hovedfooter p {
+		text-align:center;
+		color:#FFF;
+	}
+	#div1 {
+	}
+	.zeroMargin_mobile {
+	margin-left: 0;
+	}
+	.hide_mobile {
+	display: none;
+	}
+
+/*
+===================================================================================
+Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout.
+===================================================================================
+*/
+
+@media only screen and (min-width: 481px) {
+
+body {
+}
+	body h2 {
+		font-size:18px;
+	}
+	body h3 {
+		font-size:16px;
+	}
+	body p {
+		font-size:16px;
+	}
+.gridContainer {
+	width: 91.4836%;
+	padding-left: 0.7581%;
+	padding-right: 0.7581%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+                                                                                                              
+.hovedheader {												/*–––––––––––––––TABLET HEADER*/
+}
+	.hovedheader img {
+	}
+.hovedmeny {												/*–––––––––––––––TABLET HOVEDMENY*/
+	border:none;
+	padding-bottom:5px;
+	padding-left:10%;
+	
+}
+	.hovedmeny a {
+		/*border-bottom:none;*/
+		/*border-right: 1px dashed #FFF;*/
+		padding-left:7%;
+		padding-right:7%;
+		/*padding:0;*/
+		
+		display:inline;
+		margin-left:auto;
+		margin-right:auto;
+		text-align:center;
+	}
+	.hovedmeny a.aktiv {
+		background:#FFF;
+		color:#EA5A0B;
+		padding-top:10px;
+		padding-bottom:18px;
+		border-top-left-radius:25px;
+		border-top-right-radius:25px;
+		/*padding:0px 0;*/
+	}
+
+	.hovedmeny a:hover, .hovedmeny a:focus {
+		
+	}	
+	.hovedmeny a.index {
+		border-bottom:none;
+		border-top:none;
+		/*border-right: 1px dashed #FFF;*/
+	}
+	.hovedmeny a.om {
+		border-bottom:none;
+		border-top:none;
+		/*border-right: 1px dashed #FFF;*/
+		/*border-left: 1px dashed #FFF;*/
+	}
+	.hovedmeny a.arbeid {
+		border-bottom:none;
+		border-top:none;
+		/*border-left: 1px dashed #FFF;*/
+	}
+.innhold {													/*–––––––––––––––TABLET INNHOLD*/
+		margin-top:250px;
+}
+	.innhold p {
+	}
+	.bildemeny img {										/*OM og ARBEID*/
+		width:90%;
+		max-width:540px;
+	}
+	.innhold img {
+		/*border-radius: 20px;*/
+	}
+	.and img {											/*✰––––––––––AND*/
+		width:10%;
+		max-width:60px;	/*PNG-fil width er 148.61px*/
+		
+		/**margin-left:auto;**/
+		/**margin-right:auto;**/
+		
+		margin-bottom:0;
+		padding-top:0;
+		
+		/**float:right;**/
+		/**right:10%;**/
+		/**padding-right:50px;**/
+		/**padding-top:120px;**/
+		
+		display:inline;
+		position:relative;
+	}
+	.litt_arbeid {
+		display:block;
+	}
+	.kolonner {								/*////////////////////////////////////*/
+													/*TABLET KOLONNER*/
+	}											/*////////////////////////////////////*/
+		.kolonner h2 {
+			font-size:20px;		/*allerede f0nt-size:18px i body?*/
+			}	
+		.kolonner h3 {
+			font-size:16px;
+		}
+		.kolonner p {
+			font-size:16px;		/*allerede font-size:18px i body?*/
+			/*padding-bottom:20px;*/
+		}
+		.kolonne1 {
+			width:60%;
+			clear:none;
+			/*max-width:270px;*/
+		}
+			.kolonne1 img {
+				width:70%;
+				max-width:700px;
+			}
+			.tankian1 img {
+				/*margin: 0 2%;*/
+			}
+		.kolonne2 {
+			width:40%;
+			clear:none;
+			/*max-width:270px;*/
+		}
+			.kolonne2 img {
+				width:70%;
+				max-width:358px;
+			}
+		.kolonne3 {
+			clear:none;
+		}
+		.kolonne4 {
+			clear:none;
+		}
+.hovedfooter {												/*–––––––––––––––TABLET FOOTER*/
+width: 100%;
+}
+	.hovedfooter p {
+	}
+	
+.hide_tablet {
+display: none;
+}
+.zeroMargin_tablet {
+margin-left: 0;
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+
+.gridContainer {
+	width: 89.0217%;
+	max-width: 1232px;
+	padding-left: 0.4891%;
+	padding-right: 0.4891%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+#div1 {
+}
+.hovedheader {												/*–––––––––––––––DESKTOP HEADER*/
+}
+	.hovedheader img {
+	}
+		.pal img {											/*––––––––––PÅL*/
+			margin-left:10%;	/*ikke-misdtiller den*/
+			padding-left:0;
+		}
+.hovedmeny {												/*–––––––––––––––DESKTOP HOVEDMENY*/
+	/*margin-top:1%;
+	padding-top:0.5%;*/
+	padding-left:7%;
+}
+	.hovedmeny a {
+		padding-left:5%;
+		padding-right:5%;
+		text-align:start;
+	}
+.innhold {													/*–––––––––––––––DESKTOP INNHOLD*/
+}
+	innhold p {
+	}
+	.bildemeny img {										/*OM og ARBEID*/
+		/*display:none;*/
+		width:45%;
+		max-width:540px;
+		float:left;
+		display:inline;
+	}
+.bildemeny_deskop {
+	/*width:45%;
+	max-width:540px;
+	float:left;
+	display:inline;*/
+}
+.hovedfooter {												/*–––––––––––––––DESKTOP FOOTER*/
+width: 100%;
+/*margin-top:700px;*/
+}
+	.hovedfooter p {
+		text-align:start;
+		padding-left:5%;
+	}
+.zeroMargin_desktop {
+margin-left: 0;
+}
+.hide_desktop {
+display: none;
+
+}
+}

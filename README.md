@@ -1,1 +1,3 @@
-# portfolio-2015-2-etter-innlevering
+# Min portefølje fra 2015
+
+![portefølje](Images/web-portefolje-etterarbeid.jpg)

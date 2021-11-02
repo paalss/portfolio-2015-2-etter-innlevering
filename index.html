@@ -1,0 +1,104 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Påls portefølje</title>
+  <link href="CSS/boilerplate.css" rel="stylesheet" type="text/css">
+  <link href="CSS/Fluid_grid.css" rel="stylesheet" type="text/css">
+  <!-- 
+To learn more about the conditional comments around the html tags at the top of the file:
+paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+
+Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):
+* insert the link to your js here
+* remove the link below to the html5shiv
+* add the "no-js" class to the html tags at the top
+* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build 
+-->
+  <!--[if lt IE 9]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  <script src="Scrips/respond.min.js"></script>
+  <!--google webfonts-->
+  <link href='http://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+  <!---normal 400-->
+  <link href='http://fonts.googleapis.com/css?family=Lato:700' rel='stylesheet' type='text/css'>
+  <!--snarvei ikon-->
+  <link href="Images/palalalala1fitartboardtocontent.png" rel="shortcut icon">
+</head>
+
+<body>
+  <div class="gridContainer clearfix">
+    <!--////////////–CONTAINER-->
+    <!--Use Insert Panel for additional Fluid Grid Layout Elements. Note: All Fluid Layout tags must be contained within the "gridContainer" div tag.-->
+    <div id="div1" class="fluid">
+      <!--==================DIV1-->
+      <header class="fluid hovedheader">
+        <!--================HEADER-->
+        <!--This is the content for Layout Header Tag "hovedheader"-->
+        <!--<a href="index.html"><img src="Images/webstilig13.jpg" alt="pål noise"/></a>-->
+        <div class="fluid pal">
+          <a href="index.html"><img src="Images/palalalalala-37.png" alt="pål" /></a>
+        </div>
+
+        <nav class="fluid hovedmeny">
+          <!--=============HOVEDMENY-->
+          <!--This is the content for Layout Nav Tag "hovedmeny"-->
+          <a href="index.html" class="aktiv">Hjem</a>
+          <!--når om er class aktiv, må index og arbeid ha egne class for å få border-left/right 1px dashed, slik om gjør med class av om class-->
+          <a href="om.html" class="om">Om meg</a>
+          <a href="arbeid.html">Arbeid</a>
+        </nav>
+        <!--============/HOVEDMENY-->
+      </header>
+      <!--===============/HEADER-->
+      <div class="fluid innhold">
+        <!--===============INNHOLD-->
+        <h1>Velkommen til min portefølje<span class="orange"> om meg</span> og <span class="orange">mitt arbeid</span>
+        </h1>
+        <div class="bildemeny">
+          <!--=============BILDEMENY-->
+          <!--<h2>om meg</h2>
+                   <h2>arbeid</h2>-->
+          <a href="om.html"><img src="Images/webcropommegstilig13.jpg" alt="om meg pål" /></a>
+          <!--<a href="arbeid.html"><img src="Images/webcroparbeidtog12-multiply-curves.jpg" alt="arbeid murder on the orient express illustrator photoshop train"></a>-->
+          <a href="arbeid.html"><img src="Images/webcroparbeidtog12-multiply-curves.jpg" alt "junior nm ski 2015" /></a>
+        </div>
+        <!--============/BILDEMENY-->
+        <div class="litt_arbeid">
+          <!--<img src="Images/jrnmlogo.png" alt="jr nm ski hommelvik 2015"/>-->
+
+        </div>
+        <div class="bildemeny_deskop">
+          <!--=============BILDEMENY-->
+          <!--bildemeny_deskop skulle være en loddrett plassert-bilder satt til høyre for fluid innhold, men ville ikke vise seg når display ikke var none under deskop i css-->
+          <a href="om.html"><img src="Images/webcropommegstilig13.jpg" alt="om meg pål noise" /></a>
+          <a href="arbeid.html"><img src="Images/webcroparbeidtog12-multiply-curves.jpg"
+              alt="arbeid murder on the orient express illustrator photoshop train"></a>
+        </div>
+        <!--============/BILDEMENY-->
+      </div>
+      <!--==============/INNHOLD-->
+      <footer class="fluid hovedfooter">
+        <!--================FOOTER-->
+        <!--This is the content for Layout Footer Tag "hovedfooter"-->
+        <p>Copyright &copy; Pål Stakvik 2015</p>
+        <!--<div class="and">
+          		<img src="Images/weband.png" alt="glad stokkand illustrator pål tskjorter"/>
+         	</div>-->
+      </footer>
+      <!--===============/FOOTER-->
+    </div>
+    <!--=================/DIV1-->
+  </div>
+  <!--///////////–/CONTAINER-->
+</body>
+
+</html>
